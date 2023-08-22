@@ -1,5 +1,8 @@
+"use client"
+
 import React from 'react'
 import { Icon } from '@iconify/react';
+import { useRouter } from 'next/navigation';
 
 interface SearchBarProps {
     search: string;
@@ -7,10 +10,15 @@ interface SearchBarProps {
     maxWidth?: string;
 }
 
-const SearchBar = ({ search, setSearch, maxWidth }: SearchBarProps) => {
+const SearchBar = ({ search, setSearch, maxWidth, onSubmit }: SearchBarProps) => {
+    const router = useRouter();
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        router.push('/moogle/results')
+    }
     return (
         <div className={`rounded-full w-full max-w-${maxWidth || '[520px]'} flex flex-row items-center border-solid border-2`}>
-            <form className='flex flex-row items-center w-full'>
+            <form className='flex flex-row items-center w-full' onSubmit={handleSubmit}>
                 <Icon icon="material-symbols:search" className='mx-2' height={25} />
                 <input
                     type="text"

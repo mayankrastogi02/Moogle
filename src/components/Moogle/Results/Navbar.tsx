@@ -7,22 +7,24 @@ import { Icon } from '@iconify/react';
 import { Button } from "react-daisyui";
 import { SearchBar } from "..";
 import { Pill } from "@/components";
+import { useRouter } from 'next/navigation'
 
 const Navbar = ({ theme, onThemeChange }: { theme: string, onThemeChange: any }) => {
+    const router = useRouter();
     const [search, setSearch] = useState<string>('');
     return (
         <header className="w-full z-10" >
             <nav className="max-w-full px-6 py-4">
                 <div className="flex flex-row my-4">
                     <div className="flex-none my-4 mx-8">
-                        <button>
+                        <Link href="/moogle">
                             <Image
                                 src="/moogle_lower_logo.svg"
                                 alt="Moogle"
                                 width={125}
                                 height={125}
                             />
-                        </button>
+                        </Link>
                     </div>
                     <div className="flex flex-col w-full justify-center">
                         <div className="flex flex-row justify-between">
