@@ -1,10 +1,7 @@
-import { MoogleMain } from '@/components'
-import Image from 'next/image'
-
-export default function Home() {
+export default function Page() {
   return (
     <main className="overflow-hidden">
-      <MoogleMain />
+      HOME PAGE
     </main>
   )
 }
