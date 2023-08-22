@@ -10,7 +10,7 @@ interface SearchBarProps {
     maxWidth?: string;
 }
 
-const SearchBar = ({ search, setSearch, maxWidth, onSubmit }: SearchBarProps) => {
+const SearchBar = ({ search, setSearch, maxWidth }: SearchBarProps) => {
     const router = useRouter();
     const handleSubmit = (e: any) => {
         e.preventDefault();
