@@ -6,10 +6,11 @@ import React, { useState } from "react";
 import { Icon } from '@iconify/react';
 import { Button } from "react-daisyui";
 import { SearchBar } from "..";
-import { Pill } from "@/components";
+import { Menu, Pill } from "@/components";
 import { useRouter } from 'next/navigation'
+import Settings from "@/components/Settings";
 
-const Navbar = ({ theme, onThemeChange }: { theme: string, onThemeChange: any }) => {
+const Navbar = () => {
     const router = useRouter();
     const [search, setSearch] = useState<string>('');
     return (
@@ -31,8 +32,9 @@ const Navbar = ({ theme, onThemeChange }: { theme: string, onThemeChange: any })
                             <div className="w-3/5">
                                 <SearchBar search={search} setSearch={setSearch} maxWidth="full" />
                             </div>
-                            <div className="bg-purple-500">
-                                BUTTONS
+                            <div className="flex gap-5">
+                                <Settings />
+                                <Menu />
                             </div>
                         </div>
                         <div className="py-4 flex gap-4">

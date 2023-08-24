@@ -16,8 +16,10 @@ const SearchBar = ({ search, setSearch, maxWidth }: SearchBarProps) => {
         e.preventDefault();
         router.push('/moogle/results')
     }
+    console.log(maxWidth)
     return (
-        <div className={`rounded-full w-full max-w-${maxWidth || '[520px]'} flex flex-row items-center border-solid border-2`}>
+        // <div className={`rounded-full w-full max-w-${maxWidth || '[520px]'} flex flex-row items-center border-solid border-2`}>
+        <div className={`rounded-full w-full max-w-${maxWidth ? maxWidth : '[520px]'} flex flex-row items-center border-2 border-solid`}>
             <form className='flex flex-row items-center w-full' onSubmit={handleSubmit}>
                 <Icon icon="material-symbols:search" className='mx-2' height={25} />
                 <input
@@ -28,7 +30,7 @@ const SearchBar = ({ search, setSearch, maxWidth }: SearchBarProps) => {
                 />
                 {
                     search.length > 0 && (
-                        <button type='reset' className='ml-2'>
+                        <button type='reset' className='ml-2' onClick={() => { setSearch('') }}>
                             <Icon icon="ph:x" color='black' height={20} />
                         </button>
                     )

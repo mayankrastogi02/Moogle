@@ -1,11 +1,13 @@
 "use client"
 
 import Link from "next/link";
-import React from "react";
-import { Icon } from '@iconify/react';
-import { Button } from "react-daisyui";
+import React, { useContext } from "react";
+import { ThemeContext } from "@/app/layout";
+import { Menu } from "..";
 
-const Navbar = ({ theme, onThemeChange }: { theme: string, onThemeChange: any }) => {
+// const Navbar = ({ theme, onThemeChange }: { theme: string, onThemeChange: any }) => {
+const Navbar = () => {
+	const theme = useContext(ThemeContext);
 	return (
 		<header className="w-full z-10" >
 			<nav className="max-w-full px-6 py-4">
@@ -25,12 +27,10 @@ const Navbar = ({ theme, onThemeChange }: { theme: string, onThemeChange: any })
 						<Link href="#" className="link__underline_hover">
 							Images
 						</Link>
-						<button className="rounded-full p-2 items-center hover:bg-[#f0f0f0]">
-							<Icon icon="icon-park-outline:application-menu" height={20} />
-						</button>
-						<button className={`rounded ${theme === 'light' ? 'bg-[#1a73e8] text-white' : 'bg-[#8bb3fb] text-black'} px-7 py-3`}>Sign in</button>
-						<button color="primary" onClick={() => onThemeChange('dark')}>Dark</button>
-						<button color="primary" onClick={() => onThemeChange('light')}>Light</button>
+						<Menu />
+						<button className={`rounded ${theme.theme === 'light' ? 'bg-[#1a73e8] text-white' : 'bg-[#8bb3fb] text-black'} px-7 py-3`}>Sign in</button>
+						<button color="primary" onClick={() => theme.changeTheme('dark')}>Dark</button>
+						<button color="primary" onClick={() => theme.changeTheme('light')}>Light</button>
 					</div>
 				</div>
 			</nav>

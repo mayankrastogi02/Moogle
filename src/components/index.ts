@@ -1,3 +1,4 @@
 import Footer from "./Footer";
 import Pill from "./Pill";
-export { Footer, Pill };
+import Menu from "./Menu";
+export { Footer, Pill, Menu };
