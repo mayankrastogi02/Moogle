@@ -4,7 +4,7 @@ interface PillProps {
 }
 const Pill = ({ text }: PillProps) => {
     return (
-        <div className="badge badge-outline border-2 p-4 hover:bg-[#f0f0f0]">{text}</div>
+        <div className="rounded-full border border-mgrey px-4 py-2 hover:bg-[#f0f0f0]">{text}</div>
     )
 }
 

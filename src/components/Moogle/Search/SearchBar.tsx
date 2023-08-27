@@ -7,19 +7,18 @@ import { useRouter } from 'next/navigation';
 interface SearchBarProps {
     search: string;
     setSearch: any;
-    maxWidth?: string;
 }
 
-const SearchBar = ({ search, setSearch, maxWidth }: SearchBarProps) => {
+const SearchBar = ({ search, setSearch }: SearchBarProps) => {
     const router = useRouter();
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        router.push('/moogle/results')
+        const encodedSearch = encodeURI(search);
+        router.push(`/moogle/search?q=${encodedSearch}`)
     }
-    console.log(maxWidth)
     return (
         // <div className={`rounded-full w-full max-w-${maxWidth || '[520px]'} flex flex-row items-center border-solid border-2`}>
-        <div className={`rounded-full w-full max-w-${maxWidth ? maxWidth : '[520px]'} flex flex-row items-center border-2 border-solid`}>
+        <div className={`rounded-full w-full max-w-full flex flex-row items-center shadow-[1px_2px_10px_rgb(0,0,0,0.1)] hover:shadow-[1px_2px_20px_rgb(0,0,0,0.1)] `}>
             <form className='flex flex-row items-center w-full' onSubmit={handleSubmit}>
                 <Icon icon="material-symbols:search" className='mx-2' height={25} />
                 <input
