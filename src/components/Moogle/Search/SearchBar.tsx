@@ -18,7 +18,7 @@ const SearchBar = ({ search, setSearch }: SearchBarProps) => {
     }
     return (
         // <div className={`rounded-full w-full max-w-${maxWidth || '[520px]'} flex flex-row items-center border-solid border-2`}>
-        <div className={`rounded-full w-full max-w-full flex flex-row items-center shadow-[1px_2px_10px_rgb(0,0,0,0.1)] hover:shadow-[1px_2px_20px_rgb(0,0,0,0.1)] `}>
+        <div className={`rounded-full w-full max-w-full flex flex-row items-center outline outline-[1px] outline-mgrey shadow-[1px_2px_10px_rgb(0,0,0,0.1)] hover:shadow-[1px_2px_20px_rgb(0,0,0,0.1)] `}>
             <form className='flex flex-row items-center w-full' onSubmit={handleSubmit}>
                 <Icon icon="material-symbols:search" className='mx-2' height={25} />
                 <input

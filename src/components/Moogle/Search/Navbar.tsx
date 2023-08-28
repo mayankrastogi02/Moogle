@@ -29,7 +29,7 @@ const Navbar = ({ query }: { query: string }) => {
                             <div className="w-3/5">
                                 <SearchBar search={search} setSearch={setSearch} />
                             </div>
-                            <div className="flex gap-5">
+                            <div className="flex gap-2 mr-6">
                                 <Settings />
                                 <Menu />
                             </div>

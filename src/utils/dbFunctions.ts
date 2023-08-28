@@ -2,7 +2,6 @@ import { supabase } from '@/utils/initSupabase';
 import { notFound } from 'next/navigation'
 
 export const getPages = async () => {
-    console.log('getPages');
     const { data, error } = await supabase
         .from('webpages')
         .select('*')
