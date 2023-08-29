@@ -30,12 +30,12 @@ const SearchBar = ({ search, setSearch }: SearchBarProps) => {
                 {
                     search.length > 0 && (
                         <button type='reset' className='ml-2' onClick={() => { setSearch('') }}>
-                            <Icon icon="ph:x" color='black' height={20} />
+                            <Icon icon="ph:x" height={20} />
                         </button>
                     )
                 }
                 <button type='submit' className='ml-2'>
-                    <Icon icon="material-symbols:search" className='ml-2 mr-4' height={25} color='#800080' />
+                    <Icon icon="material-symbols:search" className='ml-2 mr-4' height={25} color='rgba(var(--color-mpurple))' />
                 </button>
             </form>
         </div>

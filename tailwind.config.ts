@@ -46,6 +46,7 @@ const config: Config = {
       colors: {
         mgrey: 'rgba(var(--color-mgrey), <alpha-value>)',
         mblue: 'rgba(var(--color-mblue), <alpha-value>)',
+        mpurple: 'rgba(var(--color-mpurple), <alpha-value>)',
       },
     },
   },

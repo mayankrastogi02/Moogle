@@ -5,11 +5,13 @@
 @layer base {
   :root {
     --color-mgrey: 218, 220, 224;
+    --color-mpurple: 128, 0, 128;
     --color-mblue: 26, 13, 171;
   }
 
   :root[data-theme="dark"] {
-    --color-mgrey: 218, 220, 224;
+    --color-mgrey: 60, 64, 67;
+    --color-mpurple: 96, 165, 250;
     --color-mblue: 96, 165, 250;
   }
 }
