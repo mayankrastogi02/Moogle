@@ -6,10 +6,6 @@ import { Inter } from 'next/font/google'
 import { createContext, useState } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Moogle',
-  description: 'Welcome to Moogle!',
-}
 export const ThemeContext = createContext({
   theme: 'light',
   changeTheme: (theme: string) => { }
