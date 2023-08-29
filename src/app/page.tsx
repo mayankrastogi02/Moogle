@@ -20,7 +20,7 @@ export default function Page() {
             </div>
             <h1 className="text-5xl font-bold">Hi there 👋</h1>
             <p className="py-6 text-2xl">Welcome to Moogle!</p>
-            <Link href="/moogle" className="btn bg-[#F19C00] hover:bg-[#D58A00] text-black">Let's get started!</Link>
+            <Link href="/moogle" className="btn bg-[#F19C00] hover:bg-[#D58A00] text-black">Let&apos;s get started!</Link>
           </div>
         </div>
       </div>
