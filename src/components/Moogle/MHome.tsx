@@ -15,7 +15,7 @@ const MHome = () => {
     }
     const theme = useContext(ThemeContext);
     return (
-        <div className='flex flex-col items-center justify-center w-full'>
+        <div className='flex flex-col items-center justify-center w-full m-auto px-8'>
             <Image
                 priority
                 className='my-20'

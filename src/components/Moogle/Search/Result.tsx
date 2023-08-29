@@ -1,4 +1,3 @@
-"use client";
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -15,7 +14,7 @@ const Result = ({ result }: { result: SearchResults }) => {
                         height={20}
                         width={20} />
                 </Link>
-                <Link href={result.url || "#"} target='_blank' className="address flex flex-col max-w-sm">
+                <Link href={result.url || "#"} target='_blank' className="address flex flex-col max-w-[300px] md:max-w-sm">
                     <p className="text-md font-[500]">{result.name}</p>
                     <p className="text-md font-[500] truncate">{result.url}</p>
                 </Link>

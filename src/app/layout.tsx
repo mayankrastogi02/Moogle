@@ -13,7 +13,7 @@ export const ThemeContext = createContext({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [themeSetting, setThemeSetting] = useState({
-    theme: 'light',
+    theme: 'dark',
     changeTheme: (theme: string) => {
       setThemeSetting({ ...themeSetting, theme: theme })
     }

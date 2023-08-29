@@ -14,6 +14,7 @@ const SearchBarMain = ({ search, setSearch }: SearchBarMainProps) => {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         const encodedSearch = encodeURI(search);
+        if (encodedSearch.length === 0) return;
         router.push(`/moogle/search?q=${encodedSearch}`)
     }
     return (
@@ -23,7 +24,7 @@ const SearchBarMain = ({ search, setSearch }: SearchBarMainProps) => {
                 <Icon icon="material-symbols:search" className='mx-2' height={25} />
                 <input
                     type="text"
-                    placeholder="Search"
+                    placeholder="What is Mayank's GitHub?"
                     value={search} onChange={(e) => setSearch(e.target.value)}
                     className="input px-2 w-full focus:outline-none border-none"
                 />
