@@ -1,9 +1,10 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Image from 'next/image'
 import { SearchBarMain } from '.'
 import { useRouter } from 'next/navigation'
 import { Icon } from '@iconify/react';
+import { ThemeContext } from '@/app/layout'
 
 const MHome = () => {
     const router = useRouter();
@@ -12,12 +13,13 @@ const MHome = () => {
         e.preventDefault();
         router.push('/moogle/search')
     }
+    const theme = useContext(ThemeContext);
     return (
         <div className='flex flex-col items-center justify-center w-full'>
             <Image
                 priority
                 className='my-20'
-                src="/moogle_light.svg"
+                src={theme.theme === "light" ? "/moogle_light.svg" : "/moogle_dark.svg"}
                 alt="Moogle"
                 width={400}
                 height={400} />

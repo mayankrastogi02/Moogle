@@ -18,7 +18,7 @@ const SearchBarMain = ({ search, setSearch }: SearchBarMainProps) => {
     }
     return (
         // <div className={`rounded-full w-full max-w-${maxWidth || '[520px]'} flex flex-row items-center border-solid border-2`}>
-        <div className='rounded-full w-full max-w-[520px] flex flex-row items-center border-2 border-solid'>
+        <div className={`rounded-full w-full max-w-[520px] flex flex-row items-center outline outline-[1px] outline-mgrey shadow-[1px_2px_10px_rgb(0,0,0,0.1)] hover:shadow-[1px_2px_20px_rgb(0,0,0,0.1)] `}>
             <form className='flex flex-row items-center w-full' onSubmit={handleSubmit}>
                 <Icon icon="material-symbols:search" className='mx-2' height={25} />
                 <input
@@ -30,12 +30,12 @@ const SearchBarMain = ({ search, setSearch }: SearchBarMainProps) => {
                 {
                     search.length > 0 && (
                         <button type='reset' className='ml-2' onClick={() => { setSearch('') }}>
-                            <Icon icon="ph:x" color='black' height={20} />
+                            <Icon icon="ph:x" height={20} />
                         </button>
                     )
                 }
                 <button type='submit' className='ml-2'>
-                    <Icon icon="material-symbols:search" className='ml-2 mr-4' height={25} color='#800080' />
+                    <Icon icon="material-symbols:search" className='ml-2 mr-4' height={25} color='rgba(var(--color-mpurple))' />
                 </button>
             </form>
         </div>
