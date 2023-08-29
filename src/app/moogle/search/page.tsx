@@ -16,7 +16,7 @@ const Page = async ({ searchParams }: { searchParams: { q: string } }) => {
             <Navbar query={query} />
             <hr className='h-px border-1 border-mgrey' />
             <div className='flex flex-col justify-center my-4 mx-[184px] gap-6'>
-                <p className='text-md text-slate-400 font-[500]'>About 25,270,000,000 results (0.31 seconds)</p>
+                <p className='text-md text-slate-400 font-[500]'>About {data.length} results (it happened very fast!)</p>
                 {
                     data.map((item, index) => {
                         return (

@@ -7,8 +7,8 @@ import { createContext, useState } from 'react';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MSuite',
-  description: 'Welcome to MSuite!',
+  title: 'Moogle',
+  description: 'Welcome to Moogle!',
 }
 export const ThemeContext = createContext({
   theme: 'light',
@@ -25,6 +25,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <ThemeContext.Provider value={themeSetting}>
       <html lang="en" data-theme={themeSetting.theme}>
+        <head>
+          <link rel='icon' href='/m_yellow.svg' />
+          <title>Moogle</title>
+        </head>
         <body className='relative'>
           {children}
           <Footer />

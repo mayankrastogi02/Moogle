@@ -1,5 +1,5 @@
 export default interface SearchResults {
-    content: string | null,
+    content?: string | null,
     created_at: string,
     desc: string | null,
     id: number,
