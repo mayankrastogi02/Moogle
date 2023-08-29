@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useContext } from "react";
 import { ThemeContext } from "@/app/layout";
 import { Menu } from "..";
+import Settings from "../Settings";
 
 // const Navbar = ({ theme, onThemeChange }: { theme: string, onThemeChange: any }) => {
 const Navbar = () => {
@@ -13,24 +14,25 @@ const Navbar = () => {
 			<nav className="max-w-full px-6 py-4">
 				<div className="flex justify-between">
 					<div className="flex gap-5 items-center">
-						<Link href="#" className="link__underline_hover">
+						<Link href="/moogle/construction" className="link__underline_hover">
 							About
 						</Link>
-						<Link href="#" className="link__underline_hover">
+						<Link href="/moogle/construction" className="link__underline_hover">
 							Store
 						</Link>
 					</div>
 					<div className="flex gap-5 items-center">
-						<Link href="#" className="link__underline_hover">
+						<Link href="/moogle/construction" className="link__underline_hover">
 							Mmail
 						</Link>
-						<Link href="#" className="link__underline_hover">
+						<Link href="/moogle/construction" className="link__underline_hover">
 							Images
 						</Link>
-						<Menu />
+						{/* <Menu />
 						<button className={`rounded ${theme.theme === 'light' ? 'bg-[#1a73e8] text-white' : 'bg-[#8bb3fb] text-black'} px-7 py-3`}>Sign in</button>
 						<button color="primary" onClick={() => theme.changeTheme('dark')}>Dark</button>
-						<button color="primary" onClick={() => theme.changeTheme('light')}>Light</button>
+						<button color="primary" onClick={() => theme.changeTheme('light')}>Light</button> */}
+						<Settings />
 					</div>
 				</div>
 			</nav>

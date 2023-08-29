@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import { MHome, Navbar } from '@/components/Moogle';
 
