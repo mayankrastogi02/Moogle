@@ -1,6 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+    params: { id: string }
+    searchParams: { q: string }
+}
+
+export async function generateMetadata({ params, searchParams }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    return {
+        title: "Under Construction",
+        description: `Welcome to Moogle! We are currently working on some exciting new features! Please stay tuned. Thank you for your patience`,
+        icons: "/m_yellow.svg"
+    };
+}
 
 const UnderConstruction = () => {
     return (

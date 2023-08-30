@@ -1,6 +1,21 @@
-"use clinet";
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+  params: { id: string }
+  searchParams: { q: string }
+}
+
+export async function generateMetadata({ params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  return {
+    title: "Moogle",
+    description: `Welcome to Moogle!`,
+    icons: "/m_yellow.svg"
+  };
+}
 
 export default function Page() {
   return (

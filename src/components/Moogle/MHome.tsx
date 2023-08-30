@@ -2,17 +2,10 @@
 import React, { useContext, useState } from 'react'
 import Image from 'next/image'
 import { SearchBarMain } from '.'
-import { useRouter } from 'next/navigation'
-import { Icon } from '@iconify/react';
 import { ThemeContext } from '@/app/layout'
 
 const MHome = () => {
-    const router = useRouter();
     const [search, setSearch] = useState('');
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-        router.push('/moogle/search')
-    }
     const theme = useContext(ThemeContext);
     return (
         <div className='flex flex-col items-center justify-center w-full m-auto px-8'>

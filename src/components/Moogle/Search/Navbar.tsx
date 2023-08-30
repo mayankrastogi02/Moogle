@@ -17,7 +17,7 @@ const Navbar = ({ query }: { query: string }) => {
     }, [query]);
     return (
         <header className="w-full z-10" >
-            <nav className="max-w-full px-6 py-4">
+            <nav className="max-w-full px-6 pt-4">
                 <div className="flex flex-col md:flex-row my-4">
                     {
                         inWidth ? (

@@ -24,7 +24,6 @@ const Result = ({ result }: { result: SearchResults }) => {
                 <p className="text-md font-[500]">{result.desc}</p>
             </div>
         </div>
-
     )
 }
 

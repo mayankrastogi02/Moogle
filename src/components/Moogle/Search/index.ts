@@ -1,2 +1,3 @@
 import Navbar from './Navbar';
-export { Navbar };
+import AlsoSearch from './AlsoSearch';
+export { Navbar, AlsoSearch };
