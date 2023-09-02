@@ -13,8 +13,22 @@ export async function generateMetadata({ params, searchParams }: Props,
   return {
     title: "Moogle",
     description: `Welcome to Moogle!`,
-    icons: "/m_yellow.svg"
-  };
+    icons: "/m_yellow.svg",
+    openGraph: {
+      title: "Moogle — A Personalized Search Engine",
+      description: `With Moogly you can easily search for information about me and get the most relevant information back. No more scrolling through multiple pages to find your favorite creator.`,
+      type: "website",
+      url: "https://moogleio.netlify.app/",
+      images: [
+        {
+          url: "https://moogleio.netlify.app/moogle_light.svg",
+          width: 800,
+          height: 600,
+          alt: "Moogle",
+        }
+      ],
+    },
+  }
 }
 
 export default function Page() {
