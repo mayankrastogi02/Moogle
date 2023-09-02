@@ -21,7 +21,7 @@ export async function generateMetadata({ params, searchParams }: Props,
       url: "https://moogleio.netlify.app/",
       images: [
         {
-          url: "https://moogleio.netlify.app/moogle_light.svg",
+          url: "https://res.cloudinary.com/ddmdyiucw/image/upload/v1693359497/moogle/uy4hc2eglljkp87gxfol.svg",
           width: 800,
           height: 600,
           alt: "Moogle",
