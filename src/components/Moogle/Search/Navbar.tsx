@@ -71,11 +71,11 @@ const Navbar = ({ query }: { query: string }) => {
                             }
                         </div>
                         <div className="py-4 flex gap-2 overflow-auto">
-                            <button><Pill text="All" /></button>
-                            <button><Pill text="Images" /></button>
-                            <button><Pill text="Videos" /></button>
-                            <button><Pill text="News" /></button>
-                            <button><Pill text="Projects" /></button>
+                            <Link href='/moogle/search?q=github'><Pill text="GitHub" /></Link>
+                            <Link href='/moogle/search?q=linkedin'><Pill text="LinkedIn" /></Link>
+                            <Link href='/moogle/search?q=resume'><Pill text="Resume" /></Link>
+                            <Link href='/moogle/search?q=projects'><Pill text="Projects" /></Link>
+                            <Link href='/moogle/search?q=certificates'><Pill text="Certificates" /></Link>
                         </div>
                     </div>
                 </div>

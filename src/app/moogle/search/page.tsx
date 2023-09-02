@@ -6,6 +6,7 @@ import { Result } from '@/components/Moogle'
 import SearchResults from '@/types/pages'
 import NothingFound from '@/components/Moogle/Search/NothingFound'
 import { Metadata, ResolvingMetadata } from 'next'
+import { rankPages } from '@/Hooks/rankPages'
 
 type Props = {
     params: { id: string }
@@ -27,7 +28,8 @@ const Page = async ({ searchParams }: { searchParams: { q: string } }) => {
     if (!query) {
         notFound();
     }
-    const data: SearchResults[] = await getPages(query);
+    const unrankedData: SearchResults[] = await getPages(query);
+    const data = rankPages(unrankedData, query);
     return (
         <div className='min-h-screen'>
             <Navbar query={query} />
