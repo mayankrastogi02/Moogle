@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Icon } from '@iconify/react';
 import { ThemeContext } from "@/app/layout";
+import { Menu } from '.';
 
 const Settings = () => {
     const theme = useContext(ThemeContext);
@@ -32,11 +33,6 @@ const Settings = () => {
                         </li>
                     </ul>
                 </div>
-                {/* <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
-                    <li>
-                        <div className="divider"></div>
-                    </li>
-                </ul> */}
             </div>
         </div>
     )
