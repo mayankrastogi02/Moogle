@@ -7,6 +7,9 @@ import { getPages } from '@/utils/dbFunctions';
 import React from 'react'
 
 const PageResult = async ({ query }: { query: string }) => {
+    setTimeout(() => {
+        console.log("Delayed for 1 second.");
+    }, 5000);
     const unrankedData: SearchResults[] = await getPages(query);
     const data = rankPages(unrankedData, query);
     return (
