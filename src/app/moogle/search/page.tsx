@@ -11,15 +11,15 @@ type Props = {
     searchParams: { q: string }
 }
 
-export async function generateMetadata({ params, searchParams }: Props,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
-    return {
-        title: `${searchParams.q} - Moogle`,
-        description: `Search results for ${searchParams.q} on Moogle`,
-        icons: "/m_yellow.svg"
-    };
-}
+// export async function generateMetadata({ params, searchParams }: Props,
+//     parent: ResolvingMetadata
+// ): Promise<Metadata> {
+//     return {
+//         title: `${searchParams.q} - Moogle`,
+//         description: `Search results for ${searchParams.q} on Moogle`,
+//         icons: "/m_yellow.svg"
+//     };
+// }
 
 const Page = ({ searchParams }: { searchParams: { q: string } }) => {
     const query: string | null = searchParams ? searchParams.q : null;
