@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { Icon } from '@iconify/react';
-import { useRouter } from 'next/navigation';
 
 interface SearchBarProps {
     search: string;
@@ -10,12 +9,11 @@ interface SearchBarProps {
 }
 
 const SearchBar = ({ search, setSearch }: SearchBarProps) => {
-    const router = useRouter();
     const handleSubmit = (e: any) => {
         e.preventDefault();
         const encodedSearch = encodeURI(search);
         if (encodedSearch.length === 0) return;
-        router.push(`/moogle/search?q=${encodedSearch}`)
+        window.location.href = `/moogle/search?q=${encodedSearch}`;
     }
     return (
         <div className={`rounded-full w-full max-w-full flex flex-row items-center outline outline-[1px] outline-mgrey shadow-[1px_2px_10px_rgb(0,0,0,0.1)] hover:shadow-[1px_2px_20px_rgb(0,0,0,0.1)] `}>
