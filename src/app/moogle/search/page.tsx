@@ -3,7 +3,6 @@ import React, { Suspense } from 'react'
 import { notFound } from 'next/navigation'
 import { Metadata, ResolvingMetadata } from 'next'
 import PageResult from './PageResult'
-import Loader from '@/components/Moogle/Loader'
 
 type Props = {
     params: { id: string }
@@ -29,9 +28,7 @@ const Page = ({ searchParams }: { searchParams: { q: string } }) => {
         <div className='min-h-screen'>
             <Navbar query={query} />
             <hr className='h-px border-1 border-mgrey' />
-            <Suspense fallback={<Loader number={4} />}>
-                <PageResult query={query} />
-            </Suspense>
+            <PageResult query={query} />
         </div>
     )
 }
