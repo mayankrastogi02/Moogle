@@ -6,7 +6,7 @@ import NothingFound from '@/components/Moogle/Search/NothingFound';
 import Result from '@/components/Moogle/Search/Result';
 import SearchResults from '@/types/pages';
 import { getPages } from '@/utils/dbFunctions';
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const PageResult = ({ query }: { query: string }) => {
     const [data, setData] = useState<SearchResults[]>([]);
@@ -19,9 +19,6 @@ const PageResult = ({ query }: { query: string }) => {
             setLoading(false);
         }
         fetchData();
-        // const unrankedData: SearchResults[] = await getPages(query);
-        // const data = rankPages(unrankedData, query);
-        // setData(data);
     }, []);
 
     if (loading) {
@@ -40,7 +37,7 @@ const PageResult = ({ query }: { query: string }) => {
                             <Result key={index} result={item} />
                         )
                     })
-                    : !loading ? <NothingFound /> : null
+                    : <NothingFound />
             }
             {
                 data.length > 0 ? <AlsoSearch /> : null
