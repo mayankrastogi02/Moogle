@@ -19,7 +19,7 @@ const PageResult = ({ query }: { query: string }) => {
             setLoading(false);
         }
         fetchData();
-    }, []);
+    }, [query]);
 
     if (loading) {
         return (
