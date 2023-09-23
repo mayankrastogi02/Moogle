@@ -28,11 +28,11 @@ const Page = ({ searchParams }: { searchParams: { q: string } }) => {
     }
     return (
         <div className='min-h-screen'>
-            {/* <Navbar query={query} /> */}
+            <Navbar query={query} />
             <hr className='h-px border-1 border-mgrey' />
             <Suspense fallback={<Loader number={4} />}>
-                {/* <PageResult query={query} /> */}
-                <Test />
+                <PageResult query={query} />
+                {/* <Test /> */}
             </Suspense>
         </div>
     )
