@@ -12,3 +12,9 @@ export const getPages = async (query: string) => {
     return data;
 }
 
+// Create another column that contains the vector embedding of the content column
+// Use the vector embedding to search for similar content
+// All - MiniLmL6
+// spabase pg vecotr search
+// semantic search embedding
+// chunking
