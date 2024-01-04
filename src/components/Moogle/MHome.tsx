@@ -1,12 +1,18 @@
 "use client"
-import React, { useContext, useState } from 'react'
+import React, { use, useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { SearchBarMain } from '.'
 import { ThemeContext } from '@/app/layout'
+import { chunkContent } from '@/utils/vectorSearch'
 
 const MHome = () => {
     const [search, setSearch] = useState('');
     const theme = useContext(ThemeContext);
+
+    useEffect(() => {
+        chunkContent();
+    }, [])
+
     return (
         <div className='flex flex-col items-center justify-center w-full m-auto px-8'>
             <Image
